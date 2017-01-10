@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>1KYC</title>
+	<link href="static/styles/css/cdashboard.css" rel="stylesheet">
+</head>
+
+
+<body>
+<section>
+  <script>
+    // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+	$(window).on("load resize ", function() {
+  	var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  	$('.tbl-header').css({'padding-right':scrollWidth});
+	}).resize();
+  </script>
+  <!--for demo wrap-->
+  <h1>Your User ID</h1>
+  <h2>{{userid}}</h2>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Bank</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+  	<form>
+	    <table cellpadding="0" cellspacing="0" border="0">
+	      <tbody>
+	        <tr>
+	          <td>BOA Saving</td>
+	          <td>Waiting for Submission</td>
+	          <td>
+            	<a href="/">Submit</a>
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+    <form>
+  </div>
+</section>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>1KYC</title>
+	<link href="static/styles/css/cdashboard.css" rel="stylesheet">
+</head>
+
+
+<body>
+<section>
+  <script>
+    // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+	$(window).on("load resize ", function() {
+  	var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  	$('.tbl-header').css({'padding-right':scrollWidth});
+	}).resize();
+  </script>
+  <script src="static/styles/js/bank.js"></script>
+  <!--for demo wrap-->
+  <h1>Welcome, BOA</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>UserID</th>
+          <th>Document</th>
+          <th>Status</th>
+          <th>Action</th>
+          <th>Transaction</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+	    <table cellpadding="0" cellspacing="0" border="0">
+	      <tbody>
+	        <tr>
+	          <td>12345</td>
+	          <td>rMJqOkoiYeNGUdTquQbe9wQGVxS9vIRXUv5L6X+AAks=</td>
+	          <td id = "status1">Pending</td>
+            <td><button onclick="demo1('{{ link1 }}')"> Verify</button></td>
+            <td id = "link1"></td>
+	        </tr>
+	        <tr>
+	          <td>{{userid}}</td>
+	          <td>FzX/GaPB06HGsPVKlMrC9WwvB76eegWYloDaAWvVjG4=</td>
+            <td id = "status2">Pending</td>
+            <td><button onclick="demo2('{{ link2 }}')"> Verify</button></td>
+            <td id = "link2"></td>
+	        </tr>
+	      </tbody>
+	    </table>
+  </div>
+  <div id="Verification Result">
+
+  </div>
+</section>
+
+</html>

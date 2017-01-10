@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>1KYC</title>
+  <link href="static/styles/css/login.css" rel="stylesheet">
+  <script src="static/styles/js/login.js"></script>
+</head>
+
+
+<body background="static/styles/img/bg5.jpg">
+  <center><img src="static/styles/img/logo.png" alt="what image shows" height="250" width="330"></center>
+  <div class="login-page">
+    <div class="form">
+        <form class="login-form" action="/customer-dashboard" method = "post">
+          <input id = "userid" name = "userid" type="userid" placeholder="User ID"/>
+          <button>Enter</button>
+          <p class="message">Don't have a User ID? </p>
+
+        </form>
+      <button onclick = "generateUserID()"> Generate New User ID</button>
+    </div>
+  </div>
+</body>
+</html>
